@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Aura</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/leaderboard.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg">
+        <div class="stars"></div>
+        <div class="nebula"></div>
+        <div class="cosmic-particles"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="cosmic-header">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="feed.html" class="back-btn">
+                    <span class="back-icon">←</span>
+                    <span class="back-text">Back to Feed</span>
+                </a>
+            </div>
+            
+            <div class="header-center">
+                <h1 class="page-title">Cosmic Leaderboard</h1>
+            </div>
+            
+            <div class="header-right">
+                <div class="header-actions">
+                    <button class="action-btn" id="viewAchievementsBtn">
+                        <span class="action-icon">🏆</span>
+                        <span class="action-text">Achievements</span>
+                    </button>
+                    <button class="action-btn" id="viewStatsBtn">
+                        <span class="action-icon">📊</span>
+                        <span class="action-text">My Stats</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="leaderboard-container">
+        <!-- Leaderboard Overview -->
+        <section class="leaderboard-overview">
+            <div class="overview-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">🌟</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="totalUsers">1,247</div>
+                        <div class="stat-label">Total Users</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="myRank">#42</div>
+                        <div class="stat-label">My Rank</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="myScore">2,847</div>
+                        <div class="stat-label">My Score</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Navigation -->
+        <section class="leaderboard-nav">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="global">
+                    <span class="tab-icon">🌍</span>
+                    <span class="tab-text">Global</span>
+                </button>
+                <button class="nav-tab" data-tab="campus">
+                    <span class="tab-icon">🏫</span>
+                    <span class="tab-text">Campus</span>
+                </button>
+                <button class="nav-tab" data-tab="weekly">
+                    <span class="tab-icon">📅</span>
+                    <span class="tab-text">Weekly</span>
+                </button>
+                <button class="nav-tab" data-tab="monthly">
+                    <span class="tab-icon">📆</span>
+                    <span class="tab-text">Monthly</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Leaderboard Content -->
+        <section class="leaderboard-content">
+            <!-- Global Leaderboard Tab -->
+            <div class="tab-content active" id="globalTab">
+                <div class="leaderboard-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Global Leaderboard</h3>
+                        <div class="section-actions">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="freshmen">Freshmen</button>
+                            <button class="filter-btn" data-filter="sophomores">Sophomores</button>
+                            <button class="filter-btn" data-filter="juniors">Juniors</button>
+                            <button class="filter-btn" data-filter="seniors">Seniors</button>
+                        </div>
+                    </div>
+                    <div class="leaderboard-list" id="globalLeaderboardList">
+                        <!-- Global rankings will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campus Leaderboard Tab -->
+            <div class="tab-content" id="campusTab">
+                <div class="leaderboard-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Campus Leaderboard</h3>
+                        <div class="campus-selector">
+                            <select class="cosmic-select" id="campusSelect">
+                                <option value="mit">MIT</option>
+                                <option value="stanford">Stanford</option>
+                                <option value="harvard">Harvard</option>
+                                <option value="berkeley">UC Berkeley</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="leaderboard-list" id="campusLeaderboardList">
+                        <!-- Campus rankings will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Leaderboard Tab -->
+            <div class="tab-content" id="weeklyTab">
+                <div class="leaderboard-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Weekly Leaderboard</h3>
+                        <div class="week-selector">
+                            <span class="week-display" id="weekDisplay">Week 12 (Dec 9-15)</span>
+                        </div>
+                    </div>
+                    <div class="leaderboard-list" id="weeklyLeaderboardList">
+                        <!-- Weekly rankings will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Leaderboard Tab -->
+            <div class="tab-content" id="monthlyTab">
+                <div class="leaderboard-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Monthly Leaderboard</h3>
+                        <div class="month-selector">
+                            <span class="month-display" id="monthDisplay">December 2024</span>
+                        </div>
+                    </div>
+                    <div class="leaderboard-list" id="monthlyLeaderboardList">
+                        <!-- Monthly rankings will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievement Showcase -->
+        <section class="achievement-showcase">
+            <div class="section-header">
+                <h3 class="section-title">Recent Achievements</h3>
+                <button class="view-all-btn" id="viewAllAchievementsBtn">View All</button>
+            </div>
+            <div class="achievements-grid" id="achievementsGrid">
+                <!-- Recent achievements will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Achievements Modal -->
+    <div class="modal-overlay" id="achievementsModal">
+        <div class="modal-content achievements-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Achievements Gallery</h3>
+                <button class="modal-close" id="closeAchievementsModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="achievements-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="social">Social</button>
+                    <button class="category-btn" data-category="academic">Academic</button>
+                    <button class="category-btn" data-category="creative">Creative</button>
+                    <button class="category-btn" data-category="sports">Sports</button>
+                </div>
+                <div class="achievements-list" id="achievementsList">
+                    <!-- All achievements will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Modal -->
+    <div class="modal-overlay" id="statsModal">
+        <div class="modal-content stats-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">My Statistics</h3>
+                <button class="modal-close" id="closeStatsModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="stats-overview">
+                    <div class="stat-item">
+                        <div class="stat-label">Total Score</div>
+                        <div class="stat-value">2,847</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Global Rank</div>
+                        <div class="stat-value">#42</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Campus Rank</div>
+                        <div class="stat-value">#8</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Achievements</div>
+                        <div class="stat-value">23</div>
+                    </div>
+                </div>
+                <div class="stats-breakdown">
+                    <h4 class="breakdown-title">Score Breakdown</h4>
+                    <div class="score-categories">
+                        <div class="score-category">
+                            <div class="category-info">
+                                <span class="category-name">Social Activity</span>
+                                <span class="category-score">1,245</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="score-category">
+                            <div class="category-info">
+                                <span class="category-name">Academic Excellence</span>
+                                <span class="category-score">890</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="score-category">
+                            <div class="category-info">
+                                <span class="category-name">Creative Contributions</span>
+                                <span class="category-score">712</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/leaderboard.js"></script>
+</body>
+</html>

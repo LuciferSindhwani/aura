@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends - Aura</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/friends.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg">
+        <div class="stars"></div>
+        <div class="nebula"></div>
+        <div class="cosmic-particles"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="cosmic-header">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="feed.html" class="back-btn">
+                    <span class="back-icon">←</span>
+                    <span class="back-text">Back to Feed</span>
+                </a>
+            </div>
+            
+            <div class="header-center">
+                <h1 class="page-title">Friends</h1>
+            </div>
+            
+            <div class="header-right">
+                <div class="header-actions">
+                    <button class="action-btn" id="searchFriendsBtn">
+                        <span class="action-icon">🔍</span>
+                        <span class="action-text">Search</span>
+                    </button>
+                    <button class="action-btn" id="addFriendBtn">
+                        <span class="action-icon">➕</span>
+                        <span class="action-text">Add Friend</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="friends-container">
+        <!-- Friends Overview -->
+        <section class="friends-overview">
+            <div class="overview-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="totalFriends">156</div>
+                        <div class="stat-label">Total Friends</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🟢</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="onlineFriends">23</div>
+                        <div class="stat-label">Online Now</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📱</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="recentActivity">8</div>
+                        <div class="stat-label">Recent Activity</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Friends Navigation -->
+        <section class="friends-nav">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="all">
+                    <span class="tab-icon">👥</span>
+                    <span class="tab-text">All Friends</span>
+                    <span class="tab-count">156</span>
+                </button>
+                <button class="nav-tab" data-tab="online">
+                    <span class="tab-icon">🟢</span>
+                    <span class="tab-text">Online</span>
+                    <span class="tab-count">23</span>
+                </button>
+                <button class="nav-tab" data-tab="requests">
+                    <span class="tab-icon">📨</span>
+                    <span class="tab-text">Requests</span>
+                    <span class="tab-count">3</span>
+                </button>
+                <button class="nav-tab" data-tab="suggestions">
+                    <span class="tab-icon">🌟</span>
+                    <span class="tab-text">Suggestions</span>
+                    <span class="tab-count">12</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Friends Content -->
+        <section class="friends-content">
+            <!-- All Friends Tab -->
+            <div class="tab-content active" id="allTab">
+                <div class="friends-section">
+                    <div class="section-header">
+                        <h3 class="section-title">All Friends</h3>
+                        <div class="section-actions">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="campus">Campus</button>
+                            <button class="filter-btn" data-filter="year">Year</button>
+                            <button class="filter-btn" data-filter="branch">Branch</button>
+                        </div>
+                    </div>
+                    <div class="friends-grid" id="allFriendsGrid">
+                        <!-- Friends will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Online Friends Tab -->
+            <div class="tab-content" id="onlineTab">
+                <div class="friends-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Online Friends</h3>
+                        <div class="online-indicator">
+                            <div class="pulse-dot"></div>
+                            <span>Live</span>
+                        </div>
+                    </div>
+                    <div class="friends-grid" id="onlineFriendsGrid">
+                        <!-- Online friends will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friend Requests Tab -->
+            <div class="tab-content" id="requestsTab">
+                <div class="friends-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Friend Requests</h3>
+                        <span class="request-count">3 new requests</span>
+                    </div>
+                    <div class="requests-list" id="friendRequestsList">
+                        <!-- Friend requests will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friend Suggestions Tab -->
+            <div class="tab-content" id="suggestionsTab">
+                <div class="friends-section">
+                    <div class="section-header">
+                        <h3 class="section-title">People You May Know</h3>
+                        <p class="section-subtitle">Based on your campus, interests, and mutual friends</p>
+                    </div>
+                    <div class="suggestions-grid" id="friendSuggestionsGrid">
+                        <!-- Friend suggestions will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Search Friends Modal -->
+    <div class="modal-overlay" id="searchFriendsModal">
+        <div class="modal-content search-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Search Friends</h3>
+                <button class="modal-close" id="closeSearchModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-input" placeholder="Search by name, campus, or interests..." id="searchFriendsInput">
+                    <button class="search-btn">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+                <div class="search-filters">
+                    <button class="filter-chip active" data-filter="all">All</button>
+                    <button class="filter-chip" data-filter="name">Name</button>
+                    <button class="filter-chip" data-filter="campus">Campus</button>
+                    <button class="filter-chip" data-filter="interests">Interests</button>
+                </div>
+                <div class="search-results" id="searchResults">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Friend Modal -->
+    <div class="modal-overlay" id="addFriendModal">
+        <div class="modal-content add-friend-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Add New Friend</h3>
+                <button class="modal-close" id="closeAddFriendModal">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="addFriendForm" class="add-friend-form">
+                    <div class="form-group">
+                        <label for="friendEmail" class="form-label">Email Address</label>
+                        <input type="email" id="friendEmail" name="email" class="cosmic-input" placeholder="Enter friend's email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="friendMessage" class="form-label">Personal Message (Optional)</label>
+                        <textarea id="friendMessage" name="message" class="cosmic-textarea" placeholder="Add a personal message..." rows="3" maxlength="200"></textarea>
+                        <div class="char-count">
+                            <span id="messageCharCount">0</span>/200
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cosmic-btn secondary-btn" id="cancelAddFriendBtn">Cancel</button>
+                        <button type="submit" class="cosmic-btn primary-btn" id="sendRequestBtn">
+                            <span class="btn-text">Send Request</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Friend Profile Modal -->
+    <div class="modal-overlay" id="friendProfileModal">
+        <div class="modal-content friend-profile-modal">
+            <div class="modal-header">
+                <div class="friend-profile-header">
+                    <div class="friend-avatar-large">
+                        <span class="avatar-initials" id="modalFriendInitials">AS</span>
+                        <div class="avatar-status" id="modalFriendStatus"></div>
+                    </div>
+                    <div class="friend-info">
+                        <h3 class="friend-name" id="modalFriendName">Alice Smith</h3>
+                        <p class="friend-campus" id="modalFriendCampus">MIT Campus</p>
+                        <p class="friend-bio" id="modalFriendBio">Computer Science student passionate about AI and machine learning.</p>
+                    </div>
+                </div>
+                <button class="modal-close" id="closeFriendProfileModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="friend-details">
+                    <div class="detail-section">
+                        <h4 class="detail-title">Academic Info</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Branch:</span>
+                                <span class="detail-value" id="modalFriendBranch">Computer Science</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Year:</span>
+                                <span class="detail-value" id="modalFriendYear">3rd Year</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h4 class="detail-title">Interests</h4>
+                        <div class="interests-tags" id="modalFriendInterests">
+                            <!-- Interests will be loaded here -->
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h4 class="detail-title">Mutual Friends</h4>
+                        <div class="mutual-friends" id="modalMutualFriends">
+                            <!-- Mutual friends will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="friend-actions">
+                    <button class="action-btn primary-btn" id="messageFriendBtn">
+                        <span class="btn-icon">💬</span>
+                        <span class="btn-text">Message</span>
+                    </button>
+                    <button class="action-btn secondary-btn" id="viewPostsBtn">
+                        <span class="btn-icon">📝</span>
+                        <span class="btn-text">View Posts</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/friends.js"></script>
+</body>
+</html>

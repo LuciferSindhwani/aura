@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Quests - Aura</title>
+    <link rel="stylesheet" href="css/quests.css">
+    <link rel="stylesheet" href="css/globals.css">
+</head>
+<body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg">
+        <div class="stars"></div>
+        <div class="nebula"></div>
+        <div class="cosmic-particles"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="public/aura-logo.png" alt="Aura Logo" class="logo-img">
+                <span class="logo-text">Aura</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="feed.html" class="nav-link">Feed</a>
+                <a href="friends.html" class="nav-link">Friends</a>
+                <a href="clubs.html" class="nav-link">Clubs</a>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="quests.html" class="nav-link active">Quests</a>
+                <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+            </nav>
+            <div class="user-menu">
+                <img src="public/cosmic-avatar.png" alt="User Avatar" class="user-avatar">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Cosmic Quests</h1>
+            <p class="page-subtitle">Embark on epic adventures and earn cosmic rewards</p>
+        </div>
+
+        <!-- Quest Overview -->
+        <section class="quest-overview">
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="overview-icon">🎯</div>
+                    <div class="overview-content">
+                        <div class="overview-value" id="totalQuests">24</div>
+                        <div class="overview-label">Total Quests</div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">✅</div>
+                    <div class="overview-content">
+                        <div class="overview-value" id="completedQuests">18</div>
+                        <div class="overview-label">Completed</div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">🔥</div>
+                    <div class="overview-content">
+                        <div class="overview-value" id="streakDays">7</div>
+                        <div class="overview-label">Day Streak</div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">⭐</div>
+                    <div class="overview-content">
+                        <div class="overview-value" id="totalPoints">2,450</div>
+                        <div class="overview-label">Total Points</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quest Categories -->
+        <section class="quest-categories">
+            <h2 class="section-title">Quest Categories</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="daily">
+                    <div class="category-icon">🌅</div>
+                    <div class="category-name">Daily Challenges</div>
+                    <div class="category-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                        <span class="progress-text">4/5</span>
+                    </div>
+                </div>
+                <div class="category-card" data-category="social">
+                    <div class="category-icon">👥</div>
+                    <div class="category-name">Social Missions</div>
+                    <div class="category-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <span class="progress-text">3/5</span>
+                    </div>
+                </div>
+                <div class="category-card" data-category="academic">
+                    <div class="category-icon">📚</div>
+                    <div class="category-name">Academic Goals</div>
+                    <div class="category-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                        <span class="progress-text">2/5</span>
+                    </div>
+                </div>
+                <div class="category-card" data-category="creative">
+                    <div class="category-icon">🎨</div>
+                    <div class="category-name">Creative Tasks</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                    <span class="progress-text">5/5</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Quests -->
+        <section class="daily-quests">
+            <div class="section-header">
+                <h2 class="section-title">Today's Quests</h2>
+                <div class="section-actions">
+                    <button class="btn btn-secondary" id="refreshQuestsBtn">Refresh</button>
+                    <button class="btn btn-primary" id="claimRewardsBtn">Claim Rewards</button>
+                </div>
+            </div>
+            <div class="quest-list" id="dailyQuestList">
+                <!-- Quests will be loaded by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Weekly Challenges -->
+        <section class="weekly-challenges">
+            <h2 class="section-title">Weekly Challenges</h2>
+            <div class="challenge-grid" id="weeklyChallengeGrid">
+                <!-- Challenges will be loaded by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Achievement Showcase -->
+        <section class="achievement-showcase">
+            <div class="section-header">
+                <h2 class="section-title">Recent Achievements</h2>
+                <button class="btn btn-secondary" id="viewAllAchievementsBtn">View All</button>
+            </div>
+            <div class="achievement-grid" id="recentAchievementsGrid">
+                <!-- Achievements will be loaded by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Quest Rewards -->
+        <section class="quest-rewards">
+            <h2 class="section-title">Reward Tiers</h2>
+            <div class="reward-tiers">
+                <div class="reward-tier">
+                    <div class="tier-icon">🥉</div>
+                    <div class="tier-name">Bronze</div>
+                    <div class="tier-requirement">100 Points</div>
+                    <div class="tier-rewards">
+                        <span class="reward-item">Profile Badge</span>
+                        <span class="reward-item">+50 XP</span>
+                    </div>
+                </div>
+                <div class="reward-tier">
+                    <div class="tier-icon">🥈</div>
+                    <div class="tier-name">Silver</div>
+                    <div class="tier-requirement">500 Points</div>
+                    <div class="tier-rewards">
+                        <span class="reward-item">Custom Avatar Frame</span>
+                        <span class="reward-item">+200 XP</span>
+                    </div>
+                </div>
+                <div class="reward-tier">
+                    <div class="tier-icon">🥇</div>
+                    <div class="tier-name">Gold</div>
+                    <div class="tier-requirement">1000 Points</div>
+                    <div class="tier-rewards">
+                        <span class="reward-item">Exclusive Theme</span>
+                        <span class="reward-item">+500 XP</span>
+                    </div>
+                </div>
+                <div class="reward-tier">
+                    <div class="tier-icon">💎</div>
+                    <div class="tier-name">Diamond</div>
+                    <div class="tier-requirement">2500 Points</div>
+                    <div class="tier-rewards">
+                        <span class="reward-item">Legendary Status</span>
+                        <span class="reward-item">+1000 XP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <!-- Quest Details Modal -->
+    <div class="modal" id="questDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="questModalTitle">Quest Details</h3>
+                <button class="modal-close" id="closeQuestModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="quest-details">
+                    <div class="quest-header">
+                        <div class="quest-icon" id="questModalIcon">🎯</div>
+                        <div class="quest-info">
+                            <h4 class="quest-name" id="questModalName">Quest Name</h4>
+                            <p class="quest-description" id="questModalDescription">Quest description goes here...</p>
+                        </div>
+                    </div>
+                    <div class="quest-progress">
+                        <div class="progress-info">
+                            <span class="progress-label">Progress</span>
+                            <span class="progress-value" id="questModalProgress">0/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="questModalProgressFill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="quest-rewards">
+                        <h5>Rewards</h5>
+                        <div class="reward-items" id="questModalRewards">
+                            <!-- Rewards will be populated -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="abandonQuestBtn">Abandon Quest</button>
+                <button class="btn btn-primary" id="startQuestBtn">Start Quest</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Achievement Details Modal -->
+    <div class="modal" id="achievementDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Achievement Unlocked!</h3>
+                <button class="modal-close" id="closeAchievementModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="achievement-celebration">
+                    <div class="achievement-icon" id="achievementModalIcon">🏆</div>
+                    <h4 class="achievement-name" id="achievementModalName">Achievement Name</h4>
+                    <p class="achievement-description" id="achievementModalDescription">Achievement description...</p>
+                    <div class="achievement-rewards">
+                        <div class="reward-item">
+                            <span class="reward-icon">⭐</span>
+                            <span class="reward-text">+100 Points</span>
+                        </div>
+                        <div class="reward-item">
+                            <span class="reward-icon">🎖️</span>
+                            <span class="reward-text">New Badge</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="claimAchievementBtn">Claim Rewards</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Achievements Modal -->
+    <div class="modal" id="allAchievementsModal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3 class="modal-title">All Achievements</h3>
+                <button class="modal-close" id="closeAllAchievementsModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="achievement-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="social">Social</button>
+                    <button class="filter-btn" data-category="academic">Academic</button>
+                    <button class="filter-btn" data-category="creative">Creative</button>
+                    <button class="filter-btn" data-category="sports">Sports</button>
+                </div>
+                <div class="achievements-list" id="allAchievementsList">
+                    <!-- All achievements will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/quests.js"></script>
+</body>
+</html>

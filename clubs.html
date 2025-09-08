@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs - Aura</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/clubs.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg">
+        <div class="stars"></div>
+        <div class="nebula"></div>
+        <div class="cosmic-particles"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="cosmic-header">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="feed.html" class="back-btn">
+                    <span class="back-icon">←</span>
+                    <span class="back-text">Back to Feed</span>
+                </a>
+            </div>
+            
+            <div class="header-center">
+                <h1 class="page-title">Campus Clubs</h1>
+            </div>
+            
+            <div class="header-right">
+                <div class="header-actions">
+                    <button class="action-btn" id="searchClubsBtn">
+                        <span class="action-icon">🔍</span>
+                        <span class="action-text">Search</span>
+                    </button>
+                    <button class="action-btn" id="createClubBtn">
+                        <span class="action-icon">➕</span>
+                        <span class="action-text">Create Club</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="clubs-container">
+        <!-- Clubs Overview -->
+        <section class="clubs-overview">
+            <div class="overview-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">🎭</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="totalClubs">42</div>
+                        <div class="stat-label">Total Clubs</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="myClubs">8</div>
+                        <div class="stat-label">My Clubs</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🌟</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="activeClubs">15</div>
+                        <div class="stat-label">Active Now</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clubs Navigation -->
+        <section class="clubs-nav">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="all">
+                    <span class="tab-icon">🎭</span>
+                    <span class="tab-text">All Clubs</span>
+                    <span class="tab-count">42</span>
+                </button>
+                <button class="nav-tab" data-tab="my">
+                    <span class="tab-icon">👥</span>
+                    <span class="tab-text">My Clubs</span>
+                    <span class="tab-count">8</span>
+                </button>
+                <button class="nav-tab" data-tab="trending">
+                    <span class="tab-icon">🔥</span>
+                    <span class="tab-text">Trending</span>
+                    <span class="tab-count">12</span>
+                </button>
+                <button class="nav-tab" data-tab="categories">
+                    <span class="tab-icon">📂</span>
+                    <span class="tab-text">Categories</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Clubs Content -->
+        <section class="clubs-content">
+            <!-- All Clubs Tab -->
+            <div class="tab-content active" id="allTab">
+                <div class="clubs-section">
+                    <div class="section-header">
+                        <h3 class="section-title">All Campus Clubs</h3>
+                        <div class="section-actions">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="tech">Tech</button>
+                            <button class="filter-btn" data-filter="arts">Arts</button>
+                            <button class="filter-btn" data-filter="sports">Sports</button>
+                            <button class="filter-btn" data-filter="academic">Academic</button>
+                        </div>
+                    </div>
+                    <div class="clubs-grid" id="allClubsGrid">
+                        <!-- Clubs will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Clubs Tab -->
+            <div class="tab-content" id="myTab">
+                <div class="clubs-section">
+                    <div class="section-header">
+                        <h3 class="section-title">My Clubs</h3>
+                        <div class="my-clubs-stats">
+                            <span class="member-count">Member of 8 clubs</span>
+                        </div>
+                    </div>
+                    <div class="clubs-grid" id="myClubsGrid">
+                        <!-- User's clubs will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trending Clubs Tab -->
+            <div class="tab-content" id="trendingTab">
+                <div class="clubs-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Trending Clubs</h3>
+                        <div class="trending-indicator">
+                            <div class="trending-icon">🔥</div>
+                            <span>Most Popular This Week</span>
+                        </div>
+                    </div>
+                    <div class="clubs-grid" id="trendingClubsGrid">
+                        <!-- Trending clubs will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Tab -->
+            <div class="tab-content" id="categoriesTab">
+                <div class="categories-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Club Categories</h3>
+                        <p class="section-subtitle">Explore clubs by interest area</p>
+                    </div>
+                    <div class="categories-grid" id="categoriesGrid">
+                        <!-- Categories will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Search Clubs Modal -->
+    <div class="modal-overlay" id="searchClubsModal">
+        <div class="modal-content search-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Search Clubs</h3>
+                <button class="modal-close" id="closeSearchModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-input" placeholder="Search clubs by name, category, or description..." id="searchClubsInput">
+                    <button class="search-btn">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+                <div class="search-filters">
+                    <button class="filter-chip active" data-filter="all">All</button>
+                    <button class="filter-chip" data-filter="name">Name</button>
+                    <button class="filter-chip" data-filter="category">Category</button>
+                    <button class="filter-chip" data-filter="description">Description</button>
+                </div>
+                <div class="search-results" id="searchResults">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Club Modal -->
+    <div class="modal-overlay" id="createClubModal">
+        <div class="modal-content create-club-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Create New Club</h3>
+                <button class="modal-close" id="closeCreateClubModal">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="createClubForm" class="create-club-form">
+                    <div class="form-group">
+                        <label for="clubName" class="form-label">Club Name</label>
+                        <input type="text" id="clubName" name="name" class="cosmic-input" placeholder="Enter club name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clubCategory" class="form-label">Category</label>
+                        <select id="clubCategory" name="category" class="cosmic-input" required>
+                            <option value="">Select a category</option>
+                            <option value="tech">Technology</option>
+                            <option value="arts">Arts & Culture</option>
+                            <option value="sports">Sports & Fitness</option>
+                            <option value="academic">Academic</option>
+                            <option value="social">Social</option>
+                            <option value="environmental">Environmental</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="clubDescription" class="form-label">Description</label>
+                        <textarea id="clubDescription" name="description" class="cosmic-textarea" placeholder="Describe your club's purpose and activities..." rows="4" maxlength="500" required></textarea>
+                        <div class="char-count">
+                            <span id="descriptionCharCount">0</span>/500
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="clubTags" class="form-label">Tags (Optional)</label>
+                        <input type="text" id="clubTags" name="tags" class="cosmic-input" placeholder="Enter tags separated by commas">
+                    </div>
+                    <div class="form-group">
+                        <label for="meetingTime" class="form-label">Meeting Time</label>
+                        <input type="text" id="meetingTime" name="meetingTime" class="cosmic-input" placeholder="e.g., Every Tuesday at 6 PM">
+                    </div>
+                    <div class="form-group">
+                        <label for="meetingLocation" class="form-label">Meeting Location</label>
+                        <input type="text" id="meetingLocation" name="meetingLocation" class="cosmic-input" placeholder="e.g., Student Center Room 101">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cosmic-btn secondary-btn" id="cancelCreateClubBtn">Cancel</button>
+                        <button type="submit" class="cosmic-btn primary-btn" id="createClubSubmitBtn">
+                            <span class="btn-text">Create Club</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Club Details Modal -->
+    <div class="modal-overlay" id="clubDetailsModal">
+        <div class="modal-content club-details-modal">
+            <div class="modal-header">
+                <div class="club-header">
+                    <div class="club-icon-large" id="modalClubIcon">🎭</div>
+                    <div class="club-info">
+                        <h3 class="club-name" id="modalClubName">Tech Innovation Club</h3>
+                        <p class="club-category" id="modalClubCategory">Technology</p>
+                        <p class="club-members" id="modalClubMembers">156 members</p>
+                    </div>
+                </div>
+                <button class="modal-close" id="closeClubDetailsModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="club-details">
+                    <div class="detail-section">
+                        <h4 class="detail-title">About</h4>
+                        <p class="club-description" id="modalClubDescription">
+                            A community of tech enthusiasts exploring the latest innovations in software, hardware, and emerging technologies.
+                        </p>
+                    </div>
+                    <div class="detail-section">
+                        <h4 class="detail-title">Meeting Information</h4>
+                        <div class="meeting-info">
+                            <div class="meeting-item">
+                                <span class="meeting-label">Time:</span>
+                                <span class="meeting-value" id="modalMeetingTime">Every Tuesday at 6 PM</span>
+                            </div>
+                            <div class="meeting-item">
+                                <span class="meeting-label">Location:</span>
+                                <span class="meeting-value" id="modalMeetingLocation">Student Center Room 101</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h4 class="detail-title">Recent Activities</h4>
+                        <div class="recent-activities" id="modalRecentActivities">
+                            <!-- Recent activities will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="club-actions">
+                    <button class="action-btn primary-btn" id="joinClubBtn">
+                        <span class="btn-icon">👥</span>
+                        <span class="btn-text">Join Club</span>
+                    </button>
+                    <button class="action-btn secondary-btn" id="viewEventsBtn">
+                        <span class="btn-icon">📅</span>
+                        <span class="btn-text">View Events</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/clubs.js"></script>
+</body>
+</html>

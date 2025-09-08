@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Selection - Aura</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/onboarding.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="cosmic-body">
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg">
+        <div class="stars"></div>
+        <div class="nebula"></div>
+        <div class="cosmic-particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="cosmic-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">AURA</span>
+            </a>
+            <div class="nav-progress">
+                <div class="progress-step active">1</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">2</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">3</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Header Section -->
+            <header class="page-header fade-in-up" data-animate="fade-in-up">
+                <h1 class="page-title">Choose Your Cosmic Campus</h1>
+                <p class="page-subtitle">Select the institution where your cosmic journey begins</p>
+            </header>
+
+            <!-- Campus Grid -->
+            <section class="campus-grid stagger-container" data-animate="stagger-container">
+                <!-- Chitkara University -->
+                <div class="campus-card hover-lift" data-animate="fade-in-up" data-delay="0.1">
+                    <div class="campus-icon">
+                        <div class="icon-bg chitkara-bg"></div>
+                        <span class="icon-text">CU</span>
+                    </div>
+                    <div class="campus-info">
+                        <h3 class="campus-name">Chitkara University</h3>
+                        <p class="campus-location">Punjab, India</p>
+                        <div class="campus-features">
+                            <span class="feature-tag">Tech Hub</span>
+                            <span class="feature-tag">Innovation</span>
+                        </div>
+                    </div>
+                    <button class="select-campus-btn cosmic-btn" onclick="selectCampus('chitkara')">
+                        Select Campus
+                    </button>
+                </div>
+
+                <!-- Thapar University -->
+                <div class="campus-card hover-lift" data-animate="fade-in-up" data-delay="0.2">
+                    <div class="campus-icon">
+                        <div class="icon-bg thapar-bg"></div>
+                        <span class="icon-text">TU</span>
+                    </div>
+                    <div class="campus-info">
+                        <h3 class="campus-name">Thapar University</h3>
+                        <p class="campus-location">Punjab, India</p>
+                        <div class="campus-features">
+                            <span class="feature-tag">Engineering</span>
+                            <span class="feature-tag">Research</span>
+                        </div>
+                    </div>
+                    <button class="select-campus-btn cosmic-btn" onclick="selectCampus('thapar')">
+                        Select Campus
+                    </button>
+                </div>
+
+                <!-- IIT Delhi -->
+                <div class="campus-card hover-lift" data-animate="fade-in-up" data-delay="0.3">
+                    <div class="campus-icon">
+                        <div class="icon-bg iit-delhi-bg"></div>
+                        <span class="icon-text">IITD</span>
+                    </div>
+                    <div class="campus-info">
+                        <h3 class="campus-name">IIT Delhi</h3>
+                        <p class="campus-location">Delhi, India</p>
+                        <div class="campus-features">
+                            <span class="feature-tag">Premier</span>
+                            <span class="feature-tag">Excellence</span>
+                        </div>
+                    </div>
+                    <button class="select-campus-btn cosmic-btn" onclick="selectCampus('iit-delhi')">
+                        Select Campus
+                    </button>
+                </div>
+
+                <!-- IIT Bombay -->
+                <div class="campus-card hover-lift" data-animate="fade-in-up" data-delay="0.4">
+                    <div class="campus-icon">
+                        <div class="icon-bg iit-bombay-bg"></div>
+                        <span class="icon-text">IITB</span>
+                    </div>
+                    <div class="campus-info">
+                        <h3 class="campus-name">IIT Bombay</h3>
+                        <p class="campus-location">Mumbai, India</p>
+                        <div class="campus-features">
+                            <span class="feature-tag">Innovation</span>
+                            <span class="feature-tag">Leadership</span>
+                        </div>
+                    </div>
+                    <button class="select-campus-btn cosmic-btn" onclick="selectCampus('iit-bombay')">
+                        Select Campus
+                    </button>
+                </div>
+
+                <!-- BITS Pilani -->
+                <div class="campus-card hover-lift" data-animate="fade-in-up" data-delay="0.5">
+                    <div class="campus-icon">
+                        <div class="icon-bg bits-bg"></div>
+                        <span class="icon-text">BITS</span>
+                    </div>
+                    <div class="campus-info">
+                        <h3 class="campus-name">BITS Pilani</h3>
+                        <p class="campus-location">Rajasthan, India</p>
+                        <div class="campus-features">
+                            <span class="feature-tag">Technology</span>
+                            <span class="feature-tag">Excellence</span>
+                        </div>
+                    </div>
+                    <button class="select-campus-btn cosmic-btn" onclick="selectCampus('bits-pilani')">
+                        Select Campus
+                    </button>
+                </div>
+
+                <!-- Add More Campus -->
+                <div class="campus-card add-campus hover-lift" data-animate="fade-in-up" data-delay="0.6">
+                    <div class="campus-icon">
+                        <div class="icon-bg add-bg">
+                            <span class="add-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="campus-info">
+                        <h3 class="campus-name">Add Your Campus</h3>
+                        <p class="campus-location">Coming Soon</p>
+                        <div class="campus-features">
+                            <span class="feature-tag">Request</span>
+                            <span class="feature-tag">Join</span>
+                        </div>
+                    </div>
+                    <button class="select-campus-btn cosmic-btn disabled" disabled>
+                        Coming Soon
+                    </button>
+                </div>
+            </section>
+
+            <!-- Search Section -->
+            <section class="search-section fade-in-up" data-animate="fade-in-up" data-delay="0.7">
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <input type="text" class="search-input" placeholder="Search for your campus..." id="campusSearch">
+                        <div class="search-icon">🔍</div>
+                    </div>
+                    <div class="search-suggestions" id="searchSuggestions"></div>
+                </div>
+            </section>
+
+            <!-- Popular Campuses -->
+            <section class="popular-section fade-in-up" data-animate="fade-in-up" data-delay="0.8">
+                <h3 class="section-title">Popular Campuses</h3>
+                <div class="popular-campuses">
+                    <div class="popular-campus">
+                        <span class="popular-rank">#1</span>
+                        <span class="popular-name">Chitkara University</span>
+                        <span class="popular-students">2.5K+ Students</span>
+                    </div>
+                    <div class="popular-campus">
+                        <span class="popular-rank">#2</span>
+                        <span class="popular-name">IIT Delhi</span>
+                        <span class="popular-students">1.8K+ Students</span>
+                    </div>
+                    <div class="popular-campus">
+                        <span class="popular-rank">#3</span>
+                        <span class="popular-name">Thapar University</span>
+                        <span class="popular-students">1.2K+ Students</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cosmic-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Aura - Cosmic Campus Social Media Platform</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Help & Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Campus Selection Modal -->
+    <div class="modal-overlay" id="campusModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Confirm Campus Selection</h3>
+                <button class="modal-close" onclick="closeCampusModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="selected-campus-info">
+                    <div class="campus-icon large">
+                        <div class="icon-bg" id="modalCampusIcon"></div>
+                        <span class="icon-text" id="modalCampusText"></span>
+                    </div>
+                    <h4 class="selected-campus-name" id="modalCampusName"></h4>
+                    <p class="selected-campus-location" id="modalCampusLocation"></p>
+                </div>
+                <p class="modal-message">
+                    You're about to join the cosmic community at this campus. 
+                    This will be your home base for all Aura activities.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn secondary" onclick="closeCampusModal()">Cancel</button>
+                <button class="modal-btn primary cosmic-btn" onclick="confirmCampusSelection()">Confirm Selection</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+    <script src="js/onboarding.js"></script>
+</body>
+</html>

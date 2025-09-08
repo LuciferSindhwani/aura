@@ -1,0 +1,565 @@
+/* Student Details Styles */
+/* Aura - Cosmic Campus Social Media Platform */
+
+/* Campus Display */
+.campus-display {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.campus-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 20px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: var(--cosmic-glow);
+}
+
+.campus-badge .campus-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.campus-badge .campus-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--cosmic-lighter);
+    margin-bottom: var(--spacing-xs);
+}
+
+.campus-badge .campus-location {
+    color: var(--cosmic-light);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Form Section */
+.details-form-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.student-details-form {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 20px;
+    padding: var(--spacing-xl);
+    box-shadow: var(--cosmic-glow);
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Form Labels */
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--cosmic-lighter);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+}
+
+.label-icon {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Form Inputs */
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: rgba(15, 23, 42, 0.8);
+    border: 2px solid rgba(99, 102, 241, 0.3);
+    border-radius: 15px;
+    color: var(--cosmic-lighter);
+    font-size: 1rem;
+    transition: all var(--transition-normal);
+    position: relative;
+    z-index: 2;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--cosmic-primary);
+    box-shadow: var(--cosmic-glow-strong);
+    background: rgba(15, 23, 42, 0.9);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--cosmic-light);
+    opacity: 0.6;
+}
+
+.form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+/* Input Glow Effect */
+.input-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cosmic-input:focus + .input-glow {
+    opacity: 1;
+}
+
+/* Validation Messages */
+.validation-message {
+    font-size: 0.85rem;
+    margin-top: var(--spacing-xs);
+    min-height: 20px;
+    transition: all var(--transition-normal);
+}
+
+.validation-message.error {
+    color: #ef4444;
+    opacity: 1;
+}
+
+.validation-message.success {
+    color: #22c55e;
+    opacity: 1;
+}
+
+.validation-message.hidden {
+    opacity: 0;
+}
+
+/* Character Count */
+.char-count {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--cosmic-light);
+    opacity: 0.7;
+    margin-top: var(--spacing-xs);
+}
+
+/* Interests Section */
+.interests-container {
+    margin-bottom: var(--spacing-md);
+}
+
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.interest-tag {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--cosmic-primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    user-select: none;
+}
+
+.interest-tag:hover {
+    background: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+.interest-tag.selected {
+    background: var(--cosmic-primary);
+    color: white;
+    border-color: var(--cosmic-primary);
+    box-shadow: var(--cosmic-glow);
+}
+
+.selected-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    min-height: 40px;
+}
+
+.selected-interest {
+    background: var(--cosmic-gradient-2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    animation: interest-appear 0.3s ease-out;
+}
+
+.selected-interest .remove-interest {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all var(--transition-fast);
+}
+
+.selected-interest .remove-interest:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes interest-appear {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Form Section */
+.form-section {
+    margin-bottom: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cosmic-lighter);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.btn-secondary {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--cosmic-primary);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.btn-secondary:hover {
+    background: rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary {
+    background: var(--cosmic-gradient-1);
+    color: white;
+    flex: 1;
+    max-width: 300px;
+}
+
+.btn-icon {
+    margin-right: var(--spacing-xs);
+}
+
+/* Progress Indicator */
+.progress-indicator {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}
+
+.progress-bar-container {
+    width: 100%;
+    max-width: 400px;
+    height: 8px;
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 4px;
+    margin: 0 auto var(--spacing-md);
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--cosmic-gradient-1);
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.5s ease-out;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: progress-shine 2s ease-in-out infinite;
+}
+
+@keyframes progress-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-text {
+    color: var(--cosmic-light);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+#progressPercentage {
+    color: var(--cosmic-primary);
+    font-weight: 600;
+}
+
+/* Success Modal */
+.success-modal .modal-content {
+    max-width: 600px;
+}
+
+.success-animation {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.success-checkmark {
+    width: 80px;
+    height: 80px;
+    background: var(--cosmic-gradient-4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    animation: checkmark-bounce 0.6s ease-out;
+}
+
+.check-icon {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes checkmark-bounce {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.profile-summary {
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 15px;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.profile-summary h4 {
+    color: var(--cosmic-lighter);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.profile-summary p {
+    color: var(--cosmic-light);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Form Validation States */
+.form-input.valid,
+.form-select.valid,
+.form-textarea.valid {
+    border-color: #22c55e;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.form-input.invalid,
+.form-select.invalid,
+.form-textarea.invalid {
+    border-color: #ef4444;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+/* Loading States */
+.form-input.loading,
+.form-select.loading,
+.form-textarea.loading {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12a9 9 0 11-6.219-8.56'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    animation: loading-spin 1s linear infinite;
+}
+
+@keyframes loading-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .student-details-form {
+        padding: var(--spacing-lg);
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-primary {
+        max-width: none;
+    }
+    
+    .campus-badge {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .interest-tags {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-details-form {
+        padding: var(--spacing-md);
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .campus-badge {
+        padding: var(--spacing-sm);
+    }
+    
+    .campus-badge .campus-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .campus-badge .campus-name {
+        font-size: 1.1rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .progress-bar,
+    .input-glow,
+    .interest-tag,
+    .selected-interest {
+        transition: none;
+    }
+    
+    .progress-bar::after {
+        animation: none;
+    }
+    
+    .success-checkmark {
+        animation: none;
+    }
+}
+
+/* Focus Indicators for Keyboard Navigation */
+.form-input:focus-visible,
+.form-select:focus-visible,
+.form-textarea:focus-visible {
+    outline: 2px solid var(--cosmic-primary);
+    outline-offset: 2px;
+}
+
+.interest-tag:focus-visible {
+    outline: 2px solid var(--cosmic-primary);
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .form-input,
+    .form-select,
+    .form-textarea {
+        border-width: 3px;
+    }
+    
+    .progress-bar {
+        height: 12px;
+    }
+    
+    .success-checkmark {
+        border: 3px solid white;
+    }
+}

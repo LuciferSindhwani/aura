@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Aura</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg">
+        <div class="stars"></div>
+        <div class="nebula"></div>
+        <div class="cosmic-particles"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="cosmic-header">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="feed.html" class="back-btn">
+                    <span class="back-icon">←</span>
+                    <span class="back-text">Back to Feed</span>
+                </a>
+            </div>
+            
+            <div class="header-center">
+                <h1 class="page-title">Profile</h1>
+            </div>
+            
+            <div class="header-right">
+                <div class="header-actions">
+                    <button class="action-btn" id="editProfileBtn">
+                        <span class="action-icon">✏️</span>
+                        <span class="action-text">Edit Profile</span>
+                    </button>
+                    <button class="action-btn" id="settingsBtn">
+                        <span class="action-icon">⚙️</span>
+                    </button>
+                    <button class="action-btn logout-btn" id="logoutBtn">
+                        <span class="action-icon">🚪</span>
+                        <span class="action-text">Logout</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="profile-container">
+        <!-- Profile Header -->
+        <section class="profile-header">
+            <div class="profile-cover">
+                <div class="cover-overlay"></div>
+                <div class="cover-content">
+                    <div class="profile-avatar-large">
+                        <span class="avatar-initials" id="profileAvatar">LM</span>
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-status online"></div>
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="profile-name" id="profileName">Lucifer Morningstar</h1>
+                        <p class="profile-campus" id="profileCampus">MIT Campus</p>
+                        <p class="profile-bio" id="profileBio">Fallen angel turned student, exploring the mortal realm of academia. Passionate about redemption and second chances.</p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-value" id="postsCount">42</span>
+                                <span class="stat-label">Posts</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="friendsCount">156</span>
+                                <span class="stat-label">Friends</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="likesCount">2.4k</span>
+                                <span class="stat-label">Likes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="levelValue">15</span>
+                                <span class="stat-label">Level</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Navigation -->
+        <section class="profile-nav">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="posts">
+                    <span class="tab-icon">📝</span>
+                    <span class="tab-text">Posts</span>
+                </button>
+                <button class="nav-tab" data-tab="about">
+                    <span class="tab-icon">👤</span>
+                    <span class="tab-text">About</span>
+                </button>
+                <button class="nav-tab" data-tab="friends">
+                    <span class="tab-icon">👥</span>
+                    <span class="tab-text">Friends</span>
+                </button>
+                <button class="nav-tab" data-tab="achievements">
+                    <span class="tab-icon">🏆</span>
+                    <span class="tab-text">Achievements</span>
+                </button>
+                <button class="nav-tab" data-tab="activity">
+                    <span class="tab-icon">📊</span>
+                    <span class="tab-text">Activity</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Profile Content -->
+        <section class="profile-content">
+            <!-- Posts Tab -->
+            <div class="tab-content active" id="postsTab">
+                <div class="posts-grid" id="userPosts">
+                    <!-- User posts will be loaded here -->
+                </div>
+            </div>
+
+            <!-- About Tab -->
+            <div class="tab-content" id="aboutTab">
+                <div class="about-section">
+                    <div class="about-card">
+                        <h3 class="card-title">Personal Information</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Full Name</span>
+                                <span class="info-value" id="fullName">Lucifer Morningstar</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Username</span>
+                                <span class="info-value" id="username">lucifer</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value" id="email">lucifer@campus.edu</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone</span>
+                                <span class="info-value" id="phone">+1 (555) 666-9999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <h3 class="card-title">Academic Information</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Campus</span>
+                                <span class="info-value" id="campusName">MIT Campus</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Branch</span>
+                                <span class="info-value" id="branch">Theology & Philosophy</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Year</span>
+                                <span class="info-value" id="year">3rd Year</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Semester</span>
+                                <span class="info-value" id="semester">5th Semester</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <h3 class="card-title">Interests</h3>
+                        <div class="interests-grid" id="interestsGrid">
+                            <!-- Interests will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friends Tab -->
+            <div class="tab-content" id="friendsTab">
+                <div class="friends-section">
+                    <div class="friends-header">
+                        <h3 class="section-title">Friends</h3>
+                        <button class="add-friend-btn" id="addFriendBtn">
+                            <span class="btn-icon">➕</span>
+                            <span class="btn-text">Add Friend</span>
+                        </button>
+                    </div>
+                    <div class="friends-grid" id="friendsGrid">
+                        <!-- Friends will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Tab -->
+            <div class="tab-content" id="achievementsTab">
+                <div class="achievements-section">
+                    <div class="achievements-header">
+                        <h3 class="section-title">Achievements & Badges</h3>
+                        <div class="total-score">
+                            <span class="score-label">Total Score:</span>
+                            <span class="score-value" id="totalScore">2,450</span>
+                        </div>
+                    </div>
+                    <div class="achievements-grid" id="achievementsGrid">
+                        <!-- Achievements will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Tab -->
+            <div class="tab-content" id="activityTab">
+                <div class="activity-section">
+                    <div class="activity-header">
+                        <h3 class="section-title">Recent Activity</h3>
+                        <div class="activity-filters">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="posts">Posts</button>
+                            <button class="filter-btn" data-filter="likes">Likes</button>
+                            <button class="filter-btn" data-filter="comments">Comments</button>
+                        </div>
+                    </div>
+                    <div class="activity-timeline" id="activityTimeline">
+                        <!-- Activity items will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal-overlay" id="editProfileModal">
+        <div class="modal-content edit-profile-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Edit Profile</h3>
+                <button class="modal-close" id="closeEditProfileModal">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="editProfileForm" class="edit-profile-form">
+                    <div class="form-group">
+                        <label for="editFirstName" class="form-label">First Name</label>
+                        <input type="text" id="editFirstName" name="firstName" class="cosmic-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editLastName" class="form-label">Last Name</label>
+                        <input type="text" id="editLastName" name="lastName" class="cosmic-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editBio" class="form-label">Bio</label>
+                        <textarea id="editBio" name="bio" class="cosmic-textarea" rows="4" maxlength="200"></textarea>
+                        <div class="char-count">
+                            <span id="charCount">0</span>/200
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPhone" class="form-label">Phone</label>
+                        <input type="tel" id="editPhone" name="phone" class="cosmic-input">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cosmic-btn secondary-btn" id="cancelEditBtn">Cancel</button>
+                        <button type="submit" class="cosmic-btn primary-btn" id="saveProfileBtn">
+                            <span class="btn-text">Save Changes</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/auth-helper.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
