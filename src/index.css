@@ -1,0 +1,125 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Layout safety overrides: remove unexpected right-side gap/overflow */
+* { box-sizing: border-box; }
+html, body, #root {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important; /* hide any accidental horizontal scrollbar / gap */
+}
+
+/* Common app/container selectors to force removal of right margin/padding
+   Add more selectors here if you have other top-level wrappers (e.g. .app, .container) */
+.app, .container, .feed-container, .profile-container {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Strong global layout utilities to make pages full-bleed and center content
+   - Removes any leftover right padding/margin
+   - Ensures full width rendering without horizontal overflow
+   - Keeps inner content centered using a max-width container
+*/
+html, body, #root {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Make the body layout center the main app container horizontally */
+body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* center children horizontally */
+  justify-content: flex-start !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
+}
+
+/* Central page wrapper for consistent centered layout
+   Use this class on your top-level page wrapper elements (e.g. <main className="page-wrapper">)
+   It keeps content centered while allowing full-bleed backgrounds. */
+.page-wrapper, .app-container, .container {
+  width: 100% !important;           /* occupy full viewport width */
+  max-width: var(--app-max-width, 1100px) !important; /* constrain inner content */
+  margin: 0 auto !important;        /* center horizontally */
+  padding-left: var(--app-padding, 1rem) !important;
+  padding-right: var(--app-padding, 1rem) !important;
+}
+
+/* If you want ALL paragraph text centered globally (use with caution) */
+/* p { text-align: center !important; } */
+
+/* Aggressive guard: ensure images/media never overflow viewport */
+img, video, iframe {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
