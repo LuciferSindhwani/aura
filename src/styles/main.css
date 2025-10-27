@@ -1,0 +1,145 @@
+/* Aura - Cosmic Campus Social Media Platform */
+/* Main CSS with Cosmic Theme */
+
+/* CSS Variables for Cosmic Theme */
+:root {
+    /* Cosmic Color Palette */
+    --cosmic-primary: #8A85FF;
+    --cosmic-secondary: #6C63FF;
+    --cosmic-accent: #06b6d4;
+    --cosmic-dark: #0A0B14;
+    --cosmic-darker: #070816;
+    --cosmic-light: #e2e8f0;
+    --cosmic-lighter: #f8fafc;
+    --cosmic-border: rgba(99, 102, 241, 0.1);
+    
+    /* Instagram-like dimensions */
+    --ig-max-width: 935px;
+    --ig-header-height: 60px;
+    --ig-feed-width: 470px;
+    
+    /* Cosmic Gradients */
+    --cosmic-gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --cosmic-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --cosmic-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --cosmic-gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    
+    /* Glow Effects */
+    --cosmic-glow: 0 0 20px rgba(99, 102, 241, 0.5);
+    --cosmic-glow-strong: 0 0 30px rgba(99, 102, 241, 0.8);
+    --cosmic-glow-purple: 0 0 20px rgba(139, 92, 246, 0.5);
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    
+    /* Typography */
+    --font-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-orbitron: 'Orbitron', 'Courier New', Courier, monospace;
+    --font-mono: 'Courier New', Courier, monospace;
+    
+    /* Text Colors */
+    --cosmic-text-primary: #f8fafc;
+    --cosmic-text-secondary: #cbd5e1;
+    --cosmic-text-tertiary: #64748b;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    /* Layout */
+    --app-max-width: 980px;
+    --app-padding: 1rem;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--cosmic-darker);
+    color: var(--cosmic-lighter);
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global centered container used by pages to align content */
+.app-container {
+    max-width: var(--ig-max-width);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utility class to center content both horizontally and vertically */
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Subtle card surface to lift content from the cosmic background */
+.surface {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.02);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.6), var(--cosmic-glow-strong);
+}
+
+/* Cosmic Background */
+.cosmic-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(ellipse at center, #1e293b 0%, #0f172a 50%, #020617 100%);
+}
+
+/* Stars Animation */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: stars-move 60s linear infinite;
+}
+
+@keyframes stars-move {
+    from { transform: translateX(0); }
+    to { transform: translateX(-200px); }
+}
+
+/* Rest of the existing CSS remains the same */

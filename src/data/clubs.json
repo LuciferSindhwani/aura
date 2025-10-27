@@ -1,0 +1,242 @@
+[
+  {
+    "id": "club-001",
+    "name": "Tech Innovators",
+    "category": "Technology",
+    "members": 412,
+    "description": "A club for students passionate about building software and hardware projects.",
+    "tags": ["coding","hardware","hackathons"]
+  },
+  {
+    "id": "club-002",
+    "name": "Campus Photographers",
+    "category": "Arts",
+    "members": 289,
+    "description": "Photography walks, workshops and exhibitions around campus.",
+    "tags": ["photography","art","workshops"]
+  },
+  {
+    "id": "club-003",
+    "name": "Robotics League",
+    "category": "Engineering",
+    "members": 178,
+    "description": "Design, build and compete with robots across local competitions.",
+    "tags": ["robotics","competition","mechatronics"]
+  },
+  {
+    "id": "club-004",
+    "name": "Debate Society",
+    "category": "Culture",
+    "members": 215,
+    "description": "Prepare for parliamentary-style debates and intercollege tournaments.",
+    "tags": ["debate","public-speaking","policy"]
+  },
+  {
+    "id": "club-005",
+    "name": "Entrepreneurship Cell",
+    "category": "Business",
+    "members": 360,
+    "description": "Founders, bootstraps and startup workshops connecting students and mentors.",
+    "tags": ["startups","pitch","mentorship"]
+  },
+  {
+    "id": "club-006",
+    "name": "Music Collective",
+    "category": "Arts",
+    "members": 240,
+    "description": "Bands, open mics and studio sessions for musicians on campus.",
+    "tags": ["music","bands","open-mic"]
+  },
+  {
+    "id": "club-007",
+    "name": "Coding Ninjas",
+    "category": "Technology",
+    "members": 520,
+    "description": "Competitive programming, interview prep and weekly practice sessions.",
+    "tags": ["algorithms","cp","interviews"]
+  },
+  {
+    "id": "club-008",
+    "name": "Environmental Action Group",
+    "category": "Social",
+    "members": 134,
+    "description": "Campus cleanups, sustainability projects and awareness campaigns.",
+    "tags": ["sustainability","volunteering","green"]
+  },
+  {
+    "id": "club-009",
+    "name": "Art & Design Studio",
+    "category": "Arts",
+    "members": 198,
+    "description": "Workshops across UI/UX, illustration, and graphic design.",
+    "tags": ["design","ux","illustration"]
+  },
+  {
+    "id": "club-010",
+    "name": "Astronomy Club",
+    "category": "Science",
+    "members": 98,
+    "description": "Night sky observations, telescope sessions and astrophotography.",
+    "tags": ["astronomy","stargazing","science"]
+  },
+  {
+    "id": "club-011",
+    "name": "Finance & Investment",
+    "category": "Business",
+    "members": 312,
+    "description": "Workshops on investing, markets and student-run investment projects.",
+    "tags": ["finance","investing","markets"]
+  },
+  {
+    "id": "club-012",
+    "name": "Dance Crew",
+    "category": "Arts",
+    "members": 176,
+    "description": "Choreography sessions and cultural fest performances.",
+    "tags": ["dance","performance","cultural"]
+  },
+  {
+    "id": "club-013",
+    "name": "AI Research Circle",
+    "category": "Technology",
+    "members": 142,
+    "description": "Study groups and projects covering modern AI/ML topics.",
+    "tags": ["ai","ml","research"]
+  },
+  {
+    "id": "club-014",
+    "name": "Literary Club",
+    "category": "Culture",
+    "members": 210,
+    "description": "Poetry slams, writing workshops and book discussions.",
+    "tags": ["writing","poetry","books"]
+  },
+  {
+    "id": "club-015",
+    "name": "Cinema Society",
+    "category": "Arts",
+    "members": 128,
+    "description": "Weekly film screenings and critique sessions.",
+    "tags": ["film","cinema","screenings"]
+  },
+  {
+    "id": "club-016",
+    "name": "Data Science Club",
+    "category": "Technology",
+    "members": 260,
+    "description": "Hackathons, datasets and hands-on workshops covering data science.",
+    "tags": ["data","python","visualization"]
+  },
+  {
+    "id": "club-017",
+    "name": "Photography Club",
+    "category": "Arts",
+    "members": 95,
+    "description": "Beginner to advanced photography classes and field trips.",
+    "tags": ["photography","field-trips","editing"]
+  },
+  {
+    "id": "club-018",
+    "name": "Volleyball Club",
+    "category": "Sports",
+    "members": 84,
+    "description": "Regular practice sessions and inter-college matches.",
+    "tags": ["sports","volleyball","fitness"]
+  },
+  {
+    "id": "club-019",
+    "name": "Chess Association",
+    "category": "Games",
+    "members": 67,
+    "description": "Weekly chess meetups and tournament organization.",
+    "tags": ["chess","strategy","tournaments"]
+  },
+  {
+    "id": "club-020",
+    "name": "Blockchain Guild",
+    "category": "Technology",
+    "members": 154,
+    "description": "Workshops, talks and projects on blockchain and web3.",
+    "tags": ["blockchain","web3","crypto"]
+  },
+  {
+    "id": "club-021",
+    "name": "Cooking Club",
+    "category": "Lifestyle",
+    "members": 88,
+    "description": "Recipe swaps, cooking sessions and cultural food nights.",
+    "tags": ["cooking","food","culture"]
+  },
+  {
+    "id": "club-022",
+    "name": "Mountaineering Club",
+    "category": "Outdoors",
+    "members": 54,
+    "description": "Trekking trips and safety training for outdoor adventures.",
+    "tags": ["trekking","outdoors","adventure"]
+  },
+  {
+    "id": "club-023",
+    "name": "Ethical Hacking",
+    "category": "Technology",
+    "members": 134,
+    "description": "Security talks, capture-the-flag and safe hacking practices.",
+    "tags": ["security","ctf","infosec"]
+  },
+  {
+    "id": "club-024",
+    "name": "Language Exchange",
+    "category": "Culture",
+    "members": 122,
+    "description": "Practice languages and host cultural exchange sessions.",
+    "tags": ["languages","exchange","culture"]
+  },
+  {
+    "id": "club-025",
+    "name": "Theatre Troupe",
+    "category": "Arts",
+    "members": 150,
+    "description": "Acting classes and staged plays throughout the year.",
+    "tags": ["theatre","acting","drama"]
+  },
+  {
+    "id": "club-026",
+    "name": "Gardening Collective",
+    "category": "Lifestyle",
+    "members": 46,
+    "description": "Community gardening and campus green projects.",
+    "tags": ["gardening","sustainability","green"]
+  },
+  {
+    "id": "club-027",
+    "name": "Mathematics Forum",
+    "category": "Academics",
+    "members": 72,
+    "description": "Problem solving sessions, seminars and math outreach.",
+    "tags": ["math","problem-solving","seminars"]
+  },
+  {
+    "id": "club-028",
+    "name": "Public Health Volunteers",
+    "category": "Social",
+    "members": 64,
+    "description": "Awareness drives, first-aid training and health camps.",
+    "tags": ["health","volunteering","wellness"]
+  },
+  {
+    "id": "club-029",
+    "name": "Gaming Society",
+    "category": "Games",
+    "members": 220,
+    "description": "Casual and competitive gaming nights, LAN parties and livestreams.",
+    "tags": ["gaming","esports","community"]
+  },
+  {
+    "id": "club-030",
+    "name": "Sustainability Lab",
+    "category": "Research",
+    "members": 58,
+    "description": "Student research projects focused on sustainable technologies.",
+    "tags": ["research","sustainability","projects"]
+  }
+]

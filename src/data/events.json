@@ -1,0 +1,22 @@
+[
+  {"id":"event-001","title":"Hackathon 2025","date":"2025-11-05","time":"09:00","location":"Main Auditorium","description":"24-hour campus hackathon with prizes and mentors."},
+  {"id":"event-002","title":"Photography Walk","date":"2025-10-15","time":"17:30","location":"Campus Square","description":"Evening walk for landscape and portrait photography."},
+  {"id":"event-003","title":"Startup Pitch Night","date":"2025-10-21","time":"18:00","location":"Innovation Hub","description":"Student startup pitches judged by alumni investors."},
+  {"id":"event-004","title":"Open Mic Night","date":"2025-10-12","time":"20:00","location":"Cafeteria Lawn","description":"Music and poetry open mic — sign up to perform."},
+  {"id":"event-005","title":"Medical Camp","date":"2025-10-18","time":"09:00","location":"Sports Ground","description":"Free health checkups and awareness sessions."},
+  {"id":"event-006","title":"Data Science Workshop","date":"2025-10-25","time":"10:00","location":"Lab 4","description":"Hands-on sessions on data cleaning and visualization."},
+  {"id":"event-007","title":"Debate Tournament","date":"2025-11-01","time":"14:00","location":"Lecture Hall B","description":"Inter-college debates with knockout rounds."},
+  {"id":"event-008","title":"Alumni Talk: Product Design","date":"2025-10-28","time":"16:00","location":"Auditorium","description":"Alumni share career insights on product roles."},
+  {"id":"event-009","title":"Inter-College Football","date":"2025-11-10","time":"08:30","location":"Sports Complex","description":"Quarterfinal matches across colleges."},
+  {"id":"event-010","title":"Art Exhibition","date":"2025-10-30","time":"11:00","location":"Gallery 1","description":"Student artwork on display for two weeks."},
+  {"id":"event-011","title":"Career Fair","date":"2025-11-15","time":"10:00","location":"Expo Center","description":"Companies recruit for internships and roles."},
+  {"id":"event-012","title":"Theatre Auditions","date":"2025-10-22","time":"19:00","location":"Drama Studio","description":"Auditions for next semester's play."},
+  {"id":"event-013","title":"Sustainability Seminar","date":"2025-10-20","time":"13:00","location":"Lecture Hall A","description":"Panel on campus sustainability projects."},
+  {"id":"event-014","title":"Coding Workshop","date":"2025-10-17","time":"14:30","location":"Computer Lab","description":"Intro to React and modern web dev."},
+  {"id":"event-015","title":"Music Jam","date":"2025-10-19","time":"18:30","location":"Amphitheatre","description":"Open jam session for bands and soloists."},
+  {"id":"event-016","title":"Chess Tournament","date":"2025-11-08","time":"10:00","location":"Library Hall","description":"Single-elimination chess tournament."},
+  {"id":"event-017","title":"Gardening Day","date":"2025-10-26","time":"07:30","location":"Botanical Garden","description":"Planting and campus garden maintenance."},
+  {"id":"event-018","title":"Public Health Drive","date":"2025-11-03","time":"09:00","location":"Health Center","description":"Awareness and vaccination support."},
+  {"id":"event-019","title":"Blockchain Talk","date":"2025-10-29","time":"15:00","location":"Innovation Hub","description":"Understanding decentralized apps."},
+  {"id":"event-020","title":"Film Screening: Classics","date":"2025-10-24","time":"19:30","location":"Auditorium","description":"Screening of classic films with commentary."}
+]

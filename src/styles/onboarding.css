@@ -1,0 +1,303 @@
+/* Instagram-style Variables */
+:root {
+    --ig-primary: #0095f6;
+    --ig-primary-hover: #1877f2;
+    --ig-background: #000000;
+    --ig-elevated: #121212;
+    --ig-elevated-separator: #242424;
+    --ig-text-primary: #ffffff;
+    --ig-text-secondary: #a8a8a8;
+    --ig-border: #262626;
+    --ig-stroke: #363636;
+    --ig-error: #ed4956;
+    --ig-success: #00c04b;
+    --ig-gradient: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+/* Base Container */
+.onboarding-container {
+    max-width: 450px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--ig-background);
+    color: var(--ig-text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--ig-background);
+    border-bottom: 1px solid var(--ig-border);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+    margin: 0;
+}
+
+.progress-dots {
+    display: flex;
+    gap: 4px;
+    margin: 16px auto;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--ig-text-secondary);
+}
+
+.dot.active {
+    background: var(--ig-gradient);
+}
+
+/* Campus Selection */
+.campus-selection {
+    margin-top: 56px;
+    padding: 20px 16px;
+    flex: 1;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin: 16px 0;
+}
+
+.campus-subtitle {
+    font-size: 14px;
+    color: var(--ig-text-secondary);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Search */
+.search-bar {
+    background-color: var(--ig-elevated);
+    border: 1px solid var(--ig-border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    color: var(--ig-text-primary);
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: var(--ig-text-secondary);
+}
+
+/* Campus Cards */
+.campus-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campus-card {
+    background: var(--ig-elevated);
+    border: 1px solid var(--ig-border);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.campus-card:hover {
+    background-color: var(--ig-elevated-separator);
+}
+
+.campus-card.selected {
+    background-color: rgba(0, 149, 246, 0.1);
+    border-color: var(--ig-primary);
+}
+
+.campus-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ig-gradient);
+    color: white;
+    font-size: 20px;
+}
+
+.campus-details {
+    flex: 1;
+}
+
+.campus-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.campus-description {
+    font-size: 14px;
+    color: var(--ig-text-secondary);
+    margin: 0;
+}
+
+/* Navigation */
+.navigation-buttons {
+    padding: 16px;
+    border-top: 1px solid var(--ig-border);
+    background-color: var(--ig-background);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.back-btn {
+    background-color: var(--ig-elevated);
+    color: var(--ig-text-primary);
+    border: 1px solid var(--ig-border);
+}
+
+.next-btn {
+    background-color: var(--ig-primary);
+    color: white;
+}
+
+.next-btn:disabled {
+    background-color: var(--ig-primary);
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Styles */
+.details-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+.form-group.half {
+    width: 50%;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background-color: var(--ig-elevated);
+    border: 1px solid var(--ig-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: var(--ig-text-primary);
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--ig-text-secondary);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--ig-primary);
+    outline: none;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a8a8a8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .onboarding-container {
+        max-width: 100%;
+    }
+    
+    .campus-selection {
+        padding: 16px 12px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .form-group.half {
+        width: 100%;
+    }
+}

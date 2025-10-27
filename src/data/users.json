@@ -1,0 +1,272 @@
+[
+  {
+    "id": "user-001",
+    "name": "Alex Johnson",
+    "username": "alexj",
+    "campus": "Engineering",
+    "year": "3rd",
+    "bio": "Computer Science student, coffee addict, open-source contributor.",
+    "avatar": "👨"
+  },
+  {
+    "id": "user-002",
+    "name": "Priya Singh",
+    "username": "priya_s",
+    "campus": "Business",
+    "year": "2nd",
+    "bio": "Marketing enthusiast and amateur photographer.",
+    "avatar": "👩"
+  },
+  {
+    "id": "user-003",
+    "name": "Ravi Kumar",
+    "username": "ravik",
+    "campus": "Engineering",
+    "year": "1st",
+    "bio": "Robotics hobbyist and maker.",
+    "avatar": "🤖"
+  },
+  {
+    "id": "user-004",
+    "name": "Sara Lee",
+    "username": "saralee",
+    "campus": "Arts",
+    "year": "4th",
+    "bio": "Aspiring filmmaker and storyteller.",
+    "avatar": "🎬"
+  },
+  {
+    "id": "user-005",
+    "name": "Omar Ali",
+    "username": "omar_ali",
+    "campus": "Science",
+    "year": "3rd",
+    "bio": "Physics student drawn to astronomy and coding.",
+    "avatar": "🔭"
+  },
+  {
+    "id": "user-006",
+    "name": "Nisha Patel",
+    "username": "nisha_p",
+    "campus": "Engineering",
+    "year": "2nd",
+    "bio": "UI/UX designer and illustrator.",
+    "avatar": "🎨"
+  },
+  {
+    "id": "user-007",
+    "name": "Carlos Gomez",
+    "username": "carlosg",
+    "campus": "Business",
+    "year": "4th",
+    "bio": "Investment club lead and case competitor.",
+    "avatar": "💼"
+  },
+  {
+    "id": "user-008",
+    "name": "Mei Wong",
+    "username": "meiw",
+    "campus": "Engineering",
+    "year": "1st",
+    "bio": "Learning ML and data visualization.",
+    "avatar": "📊"
+  },
+  {
+    "id": "user-009",
+    "name": "Liam O'Connor",
+    "username": "liamo",
+    "campus": "Arts",
+    "year": "2nd",
+    "bio": "Bass guitarist in the campus band.",
+    "avatar": "🎸"
+  },
+  {
+    "id": "user-010",
+    "name": "Fatima Noor",
+    "username": "fatimanoor",
+    "campus": "Medicine",
+    "year": "3rd",
+    "bio": "Medical student interested in public health.",
+    "avatar": "🩺"
+  },
+  {
+    "id": "user-011",
+    "name": "Ethan Brown",
+    "username": "ethanb",
+    "campus": "Engineering",
+    "year": "4th",
+    "bio": "Full-stack developer and mentor.",
+    "avatar": "🧑‍💻"
+  },
+  {
+    "id": "user-012",
+    "name": "Nina Rossi",
+    "username": "ninar",
+    "campus": "Arts",
+    "year": "1st",
+    "bio": "Graphic artist and animator.",
+    "avatar": "🖌️"
+  },
+  {
+    "id": "user-013",
+    "name": "Kofi Mensah",
+    "username": "kofi_m",
+    "campus": "Business",
+    "year": "2nd",
+    "bio": "Debater and model UN participant.",
+    "avatar": "🗣️"
+  },
+  {
+    "id": "user-014",
+    "name": "Yuki Tanaka",
+    "username": "yukit",
+    "campus": "Science",
+    "year": "3rd",
+    "bio": "Chemistry lover and lab assistant.",
+    "avatar": "🔬"
+  },
+  {
+    "id": "user-015",
+    "name": "Diego Silva",
+    "username": "diego_s",
+    "campus": "Sports",
+    "year": "2nd",
+    "bio": "Soccer captain and fitness coach.",
+    "avatar": "⚽"
+  },
+  {
+    "id": "user-016",
+    "name": "Ananya Rao",
+    "username": "ananya_r",
+    "campus": "Engineering",
+    "year": "3rd",
+    "bio": "AI researcher and open-source contributor.",
+    "avatar": "🤖"
+  },
+  {
+    "id": "user-017",
+    "name": "George Park",
+    "username": "georgep",
+    "campus": "Engineering",
+    "year": "1st",
+    "bio": "Enthusiastic about hardware and embedded systems.",
+    "avatar": "🔧"
+  },
+  {
+    "id": "user-018",
+    "name": "Zara Khan",
+    "username": "zarak",
+    "campus": "Arts",
+    "year": "4th",
+    "bio": "Theatre performer and playwright.",
+    "avatar": "🎭"
+  },
+  {
+    "id": "user-019",
+    "name": "Ivan Petrov",
+    "username": "ivanp",
+    "campus": "Science",
+    "year": "2nd",
+    "bio": "Data science enthusiast and skier.",
+    "avatar": "⛷️"
+  },
+  {
+    "id": "user-020",
+    "name": "Laila Ahmed",
+    "username": "lailaa",
+    "campus": "Business",
+    "year": "3rd",
+    "bio": "Design thinker and product manager-in-training.",
+    "avatar": "📐"
+  },
+  {
+    "id": "user-021",
+    "name": "Samir Gupta",
+    "username": "samir_g",
+    "campus": "Engineering",
+    "year": "2nd",
+    "bio": "Competitive programmer and algorithm geek.",
+    "avatar": "🧠"
+  },
+  {
+    "id": "user-022",
+    "name": "Hannah Kim",
+    "username": "hannahk",
+    "campus": "Arts",
+    "year": "3rd",
+    "bio": "Painter and visual storyteller.",
+    "avatar": "🖼️"
+  },
+  {
+    "id": "user-023",
+    "name": "Mohamed Salah",
+    "username": "moh_s",
+    "campus": "Sports",
+    "year": "1st",
+    "bio": "Athlete and sports science student.",
+    "avatar": "🏅"
+  },
+  {
+    "id": "user-024",
+    "name": "Isabella Cruz",
+    "username": "isac",
+    "campus": "Business",
+    "year": "4th",
+    "bio": "Consulting club member and case lead.",
+    "avatar": "📊"
+  },
+  {
+    "id": "user-025",
+    "name": "Noah Miller",
+    "username": "noahm",
+    "campus": "Engineering",
+    "year": "1st",
+    "bio": "Learning full-stack and mobile dev.",
+    "avatar": "📱"
+  },
+  {
+    "id": "user-026",
+    "name": "Aisha Yusuf",
+    "username": "aishay",
+    "campus": "Medicine",
+    "year": "2nd",
+    "bio": "Medical volunteer and research assistant.",
+    "avatar": "🩺"
+  },
+  {
+    "id": "user-027",
+    "name": "Tom Baker",
+    "username": "tomb",
+    "campus": "Arts",
+    "year": "2nd",
+    "bio": "Indie filmmaker and editor.",
+    "avatar": "🎥"
+  },
+  {
+    "id": "user-028",
+    "name": "Priyanka Mehta",
+    "username": "priyankam",
+    "campus": "Engineering",
+    "year": "4th",
+    "bio": "Capstone on renewable energy solutions.",
+    "avatar": "🔋"
+  },
+  {
+    "id": "user-029",
+    "name": "Daniel Lopez",
+    "username": "daniell",
+    "campus": "Business",
+    "year": "3rd",
+    "bio": "Social media strategist and content creator.",
+    "avatar": "📸"
+  },
+  {
+    "id": "user-030",
+    "name": "Maya Patel",
+    "username": "mayap",
+    "campus": "Science",
+    "year": "1st",
+    "bio": "Research intern and science communicator.",
+    "avatar": "🔬"
+  }
+]
